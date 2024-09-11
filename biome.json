@@ -1,0 +1,57 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": false,
+			"style": {
+				"useBlockStatements": "warn",
+				"useNamingConvention": {
+					"level": "warn",
+					"options": {
+						"strictCase": false,
+						"conventions": [
+							{
+								"selector": {
+									"kind": "importNamespace"
+								},
+								"formats": [
+									"camelCase",
+									"PascalCase"
+								]
+							},
+							{
+								"selector": {
+									"kind": "importAlias"
+								},
+								"formats": [
+									"camelCase",
+									"PascalCase"
+								]
+							}
+						]
+					}
+				}
+			},
+			"suspicious": {
+				"noDoubleEquals": "warn"
+			}
+		},
+		"ignore": [
+			"dist"
+		]
+	},
+	"javascript": {
+		"globals": []
+	},
+	"overrides": [
+		{
+			"include": [
+				"**/*.ts"
+			]
+		}
+	]
+}
